@@ -78,7 +78,7 @@ docker ps
 Let's execute a command in the running container:
 
 ```sh
-docker exec hello-world bash -c "echo Hello from running container"
+docker exec hello-world bash -c "env"
 ```
 
 We can start an interactive terminal with -it (--interactive, --tty):
