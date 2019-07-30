@@ -8,6 +8,13 @@
       "type": "node",
       "request": "attach",
       "name": "Attach Node"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach 3201",
+      "address": "localhost",
+      "port": 3201
     }
   ]
 }

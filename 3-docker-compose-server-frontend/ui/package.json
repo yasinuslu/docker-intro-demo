@@ -1,0 +1,22 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel --hmr-port 3001 index.html",
+    "build": "parcel build index.html",
+    "dev": "yarn install; yarn start"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
