@@ -27,6 +27,7 @@ render(
     <Counter name="counter1" />
     <Counter name="counter2" />
     <Counter name="counter3" />
+    <Counter name="counter4" />
   </CounterContainer>,
   document.getElementById('root')
 );
