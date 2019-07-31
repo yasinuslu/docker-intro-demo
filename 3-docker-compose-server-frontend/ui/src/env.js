@@ -1,1 +1,2 @@
-export const API_URL = 'http://localhost:3200';
+export const API_URL =
+  process.env.API_URL || `http://${window.location.hostname}:3200`;
