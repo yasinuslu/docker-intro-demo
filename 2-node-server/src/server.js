@@ -2,7 +2,7 @@ const express = require('express');
 const Database = require('./Database');
 const env = require('./env');
 
-const db = new Database(env.DATA_FILE);
+const db = new Database(env.DATA_DIR);
 
 const app = express();
 app.use(express.json());

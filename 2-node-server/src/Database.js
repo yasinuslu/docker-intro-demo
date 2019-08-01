@@ -1,18 +1,22 @@
 const fs = require('fs-extra');
+const path = require('path');
 
 module.exports = class Database {
-  constructor(path) {
-    this.path = path;
+  constructor(dir) {
+    this.dir = dir;
+    this.mainDbPath = path.resolve(dir, 'db.json');
   }
 
   async init() {
-    if (!(await fs.exists(this.path))) {
-      await fs.write({});
+    await fs.ensureDir(this.dir);
+
+    if (!(await fs.exists(this.mainDbPath))) {
+      await fs.writeFile(this.mainDbPath, JSON.stringify({}));
     }
   }
 
   async read() {
-    const content = await fs.readFile(this.path);
+    const content = await fs.readFile(this.mainDbPath);
     try {
       const json = JSON.parse(content);
       return json;
@@ -22,7 +26,7 @@ module.exports = class Database {
   }
 
   async write(data) {
-    await fs.writeFile(this.path, JSON.stringify(data));
+    await fs.writeFile(this.mainDbPath, JSON.stringify(data));
   }
 
   async set(name, value) {
