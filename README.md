@@ -4,7 +4,7 @@ You can find following demos in this repository:
 
 ## [1-hello-world](./1-hello-world)
 
-A simple container that can serve web content using `serve` package. `nginx` would be a better suit for serving static content but this demo focuses on JavaScript.
+A simple container that can serve web content using `serve` package. `nginx` would be a better choice for serving static content but this demo focuses on JavaScript.
 
 ## [2-node-server](./2-node-server)
 
