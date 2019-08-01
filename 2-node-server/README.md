@@ -11,7 +11,19 @@ docker build -t docker-intro/node-server .
 Run the container:
 
 ```sh
-docker run -d -p 3000:3000 docker-intro/node-server
+docker run -it -p 3000:3000 docker-intro/node-server
+```
+
+You can provide different environment variables while running your container:
+
+```sh
+docker run -it -e DATA_DIR=/data -p 3000:3000 docker-intro/node-server
+```
+
+If you want to run it in background:
+
+```sh
+docker run -d -e DATA_DIR=/data -p 3000:3000 docker-intro/node-server
 ```
 
 ## Development
